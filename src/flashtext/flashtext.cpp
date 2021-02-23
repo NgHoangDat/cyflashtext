@@ -231,32 +231,22 @@ struct flashtext::Node {
 
         return matches;
     }
-
 };
 
-void flashtext::put(char *n, char *t) {
-    String name(n);
-    String text(t);
-
+void flashtext::put(const String &text, const String &name="default") {
     if (!NODES.count(name)) {
         NODES[name] = std::make_shared<Node>(Node());
     }
     NODES[name].get()->put(text);
 }
 
-void flashtext::pop(char *n, char *t) {
-    String name(n);
-    String text(t);
-
+void flashtext::pop(const String &text, const String &name="default") {
     if (NODES.count(name)) {
         NODES[name].get()->pop(text);
     }
 }
 
-Vec<Match> flashtext::extract(char *n, char *t, bool strict=true) {
-    String name(n);
-    String text(t);
-    
+Vec<Match> flashtext::extract(const String &name, const String &text="default", bool strict=true) {
     if (!NODES.count(name)) {
         return {};
     }

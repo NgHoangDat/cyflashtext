@@ -26,15 +26,15 @@ namespace vocab {
         "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"
     };
 
-    String SPACE = " ";
+    // String SPACE = " ";
 
-    String COMMA = ",";
+    // String COMMA = ",";
 
-    String STOP = ".";
+    // String STOP = ".";
 
-    String COLON = ":";
+    // String COLON = ":";
 
-    const Vec<String> PUNCTUATIONS = {};
+    // const Vec<String> PUNCTUATIONS = {};
     
-    const Vec<String> BRACES = {};
+    // const Vec<String> BRACES = {};
 }

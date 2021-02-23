@@ -25,7 +25,7 @@ namespace flashtext {
         }
     };
 
-    extern void put(char *trie, char *text);
-    extern void pop(char *trie, char *text);
-    extern Vec<Match> extract(char *trie, char* text, bool strict);
+    extern void put(const String &text, const String &name);
+    extern void pop(const String &text, const String &name);
+    extern Vec<Match> extract(const String &text, const String &name, bool strict);
 }
