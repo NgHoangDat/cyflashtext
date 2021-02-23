@@ -4,3 +4,6 @@
 **/.ipynb_checkpoints
 **/*.ipynb
 **/*.so
+dist
+env
+cyflashtext.egg_info
