@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 from pybind11.setup_helpers import Pybind11Extension, build_ext
 from pybind11 import get_cmake_dir
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 with open("README.md", "r", encoding='utf-8') as fh:
     long_description = fh.read()
@@ -36,6 +36,10 @@ setup(
         "Operating System :: OS Independent",
         "Topic :: Text Processing :: Linguistic"
     ],
+    include_package_data=True,
+    # package_data = {
+    #     "": ["lib/flashtext/flashtext.h"]
+    # },
     python_requires='>=3.6',
     install_requires=[
         'pydantic'
